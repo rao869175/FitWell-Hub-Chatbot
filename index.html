@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Assistant</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+
+
 </head>
 <body>
     <h1>Chat with our Assistant</h1>
-    
-    <form method="POST">
-        <input type="text" name="user_input" placeholder="Ask a question..." required>
+
+    <form id="chatForm">
+        <input type="text" id="userInput" name="user_input" placeholder="Ask a question..." required>
         <button type="submit">Submit</button>
     </form>
-    
-    {% if response %}
-        <div class="response">
-            <h3>Response:</h3>
-            <p>{{ response }}</p>
-        </div>
-    {% endif %}
+
+    <div id="responseArea"></div>
+
+   
 </body>
 </html>
